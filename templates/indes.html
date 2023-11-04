@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+        <title>Youtube Video Downloader</title>
+    <!-- <script>
+        function move(){
+            <a href="https://www.youtube.com">Youtube</a>
+            // location.replace("https://www.youtube.com")
+        }
+        function home(){
+            location.replace("http://127.0.0.1:5000")
+        }
+    </script> -->
+    </head>
+    <body>
+        <center>
+            <div class="tab">
+
+                <a href="http://127.0.0.1:5000" class="bu" target="_self"><button class="tablinks" onclick="home()" style="color: white; font-size:40px;">Home</button></a><br><br><br><br>
+                <a href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl" class="bu" target="_blank"><button class="tablinks"  style="color: white; font-size:40px;">Trending</button></a><br><br><br><br>
+                <a href="https://www.youtube.com" class="bu" target="_blank"><button class="tablinks" onclick="move()" style="color: white; font-size:40px;">Videos</button></a><br><br><br><br>
+                <a href="https://www.youtube.com/shorts/BqioDUcjwB4" class="bu" target="_blank"><button class="tablinks"  style="color: white; font-size:40px;">Shorts</button></a><br><br><br><br>
+                <a href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw" class="bu" target="_blank"><button class="tablinks"  style="color: white; font-size:40px;">Sports</button></a><br><br><br><br>
+                <a href="https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw" class="bu" target="_blank"><button class="tablinks"  style="color: white; font-size:40px;">News</button></a><br><br><br><br>
+                <a href="https://www.youtube.com/playlist?list=LL" class="bu" target="_blank"><button class="tablinks"  style="color: white; font-size:40px;">Liked Videos</button></a><br><br><br><br>
+            </div>
+    <div class="container">  
+        <a href="https://www.youtube.com/" target="_blank"> <img id="imge" src="static/youtubes.png"/> </a>
+        <h1 style="font-family:Audiowide; color: white;"><b>Youtube</b></h1><br><br>   
+        <form action="/" method="post">      
+                <label for="video-url">Enter the Youtube URL: </label></br></br>
+                <input type="text" name="video_url" id="video-url" required></br></br>
+            <button class="button">Submit</button>
+        </form> 
+        {% if video_path %}
+        <p>Video downloaded: <a href="{{ video_path }}" target="_blank">{{ video_name }}</a></p>
+    {% endif %}    
+    </div>
+</center>
+    </body>
+</html>
